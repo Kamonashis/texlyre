@@ -8,6 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
+RUN apk add --no-cache git
 RUN npm install --production
 
 # Copy the rest of the application code
